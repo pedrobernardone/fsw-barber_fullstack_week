@@ -7,3 +7,5 @@ import { Button } from "./_components/ui/button"
 const Home = () => {
   return <Button>Pronto para testar</Button>
 }
+
+export default Home
