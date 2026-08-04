@@ -1,6 +1,6 @@
 # Checklist
  - [X] Setup do banco
- - [] Seeding do banco de dados
+ - [X] Seeding do banco de dados
  - [] Introdução ao Next.js
  - [] Tailwind e Shadcn
  - [] Git hooks
