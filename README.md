@@ -3,13 +3,13 @@
  - [X] Seeding do banco de dados
  - [X] Introdução ao Next.js
  - [X] Tailwind e Shadcn
- - [] Git hooks
+ - [X] Git hooks
 
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
 
-First, run the development server:
+First, run the development server:nḿ
 
 ```bash
 npm run dev
