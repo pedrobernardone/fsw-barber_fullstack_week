@@ -1,8 +1,8 @@
 # Checklist
  - [X] Setup do banco
  - [X] Seeding do banco de dados
- - [] Introdução ao Next.js
- - [] Tailwind e Shadcn
+ - [X] Introdução ao Next.js
+ - [X] Tailwind e Shadcn
  - [] Git hooks
 
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
