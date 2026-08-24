@@ -31,7 +31,7 @@ const Home = () => {
             alt="banner"
             src="/banner-pizza.png"
             fill
-            className="object-cover"
+            className="rounded-xl object-cover"
           />
         </div>
 
@@ -40,7 +40,7 @@ const Home = () => {
             <div className="flex flex-col gap-2 py-2">
               <Badge className="w-fit">Confirmado</Badge>
               <h3>Corte de cabelo</h3>
-              <div className="flex items-center gap-2 py-5 pl-5">
+              <div className="flex items-center gap-2 py-5">
                 <Avatar className="h-6 w-6">
                   <AvatarImage src="https://utfs.io/f/c97a2dc9-cf62-468b-a851-bfd2bdde775f-16p.png"></AvatarImage>
                 </Avatar>
