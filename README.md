@@ -1,43 +1,77 @@
-# Checklist
- - [X] Setup do banco
- - [X] Seeding do banco de dados
- - [X] Introdução ao Next.js
- - [X] Tailwind e Shadcn
- - [X] Git hooks
+# 💈 FSW Barber
 
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+Aplicação web de **agendamento em barbearias** construída com Next.js, Prisma e PostgreSQL. Projeto de estudo desenvolvido durante a Full Stack Week.
 
-## Getting Started
+> 🚧 **Status:** em desenvolvimento. O modelo de dados e a carga inicial estão prontos; a interface inicial ainda usa conteúdo estático.
 
-First, run the development server:nḿ
+## ✅ Progresso
+
+- [x] Configuração do banco de dados
+- [x] Seed do banco de dados
+- [x] Introdução ao Next.js
+- [x] Tailwind CSS e shadcn/ui
+- [x] Git hooks (Husky, lint-staged e validação de mensagens de commit)
+- [ ] Autenticação
+- [ ] Listagem de barbearias e serviços com dados reais
+- [ ] Fluxo de agendamento
+
+## 🗄️ Modelo de dados
+
+- **Autenticação:** `User`, `Account`, `Session`, `VerificationToken`
+- **Domínio:** `Barbershop` → `BarbershopService` → `Booking` (vinculado a `User`)
+
+O esquema completo está em [`prisma/schema.prisma`](prisma/schema.prisma).
+
+## 🛠️ Tecnologias
+
+- [Next.js](https://nextjs.org/) (App Router) e React 19
+- TypeScript
+- [Tailwind CSS 4](https://tailwindcss.com/) e [shadcn/ui](https://ui.shadcn.com/)
+- [Prisma ORM](https://www.prisma.io/) com PostgreSQL
+- ESLint, Prettier, Husky e lint-staged
+
+## 📋 Pré-requisitos
+
+- Node.js 20 ou superior
+- Uma instância de PostgreSQL acessível
+
+## 🚀 Como executar
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/pedrobernardone/fsw-barber_fullstack_week.git
+cd fsw-barber_fullstack_week
+npm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Crie um arquivo `.env` na raiz com a conexão do banco:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```env
+DATABASE_URL="postgresql://USUARIO:SENHA@localhost:5432/NOME_DO_BANCO"
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Aplique as migrações, popule o banco e inicie o servidor:
 
-## Learn More
+```bash
+npx prisma migrate dev
+npx prisma db seed
+npm run dev
+```
 
-To learn more about Next.js, take a look at the following resources:
+Acesse [http://localhost:3000](http://localhost:3000).
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 📜 Scripts
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+| Comando | Descrição |
+|---|---|
+| `npm run dev` | Servidor de desenvolvimento |
+| `npm run build` | Build de produção |
+| `npm run start` | Executa o build de produção |
+| `npm run lint` | Verificação com ESLint |
 
-## Deploy on Vercel
+## 🔒 Segurança
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Nunca versione o arquivo `.env`. Ele contém credenciais e deve estar listado no `.gitignore`.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 👤 Autor
+
+**Pedro Bernardone**
