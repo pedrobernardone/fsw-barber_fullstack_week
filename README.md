@@ -72,6 +72,3 @@ Acesse [http://localhost:3000](http://localhost:3000).
 
 Nunca versione o arquivo `.env`. Ele contém credenciais e deve estar listado no `.gitignore`.
 
-## 👤 Autor
-
-**Pedro Bernardone**
